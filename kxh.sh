@@ -35,3 +35,15 @@ source ~/.bash_profile
 
 unset CFLAGS
 echo unset CFLAGS >> ~/.bashrc
+
+#okay so there is a some kind of "work for you" place. 
+# https://clfs.org/view/clfs-embedded/arm/cross-tools/variables.html check that shit and ajust it to your needs
+# im using a Orange Pi Zero with a 32bit armv7l processor
+
+export KXH_CLFS_FLOAT=hard
+export KXH_CLFS_FPU=vfpv4
+
+export KXH_CLFS_HOST=$(echo ${MACHTYPE} | sed -e 's/-[^-]*/-cross/')
+export KXH_CLFS_TARGET=arm-linnux-musleabihf
+
+export
